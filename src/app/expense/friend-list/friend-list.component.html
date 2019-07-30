@@ -1,0 +1,18 @@
+<h1>Welcome {{userfname}}! Please add friends from below!</h1>
+
+<ul class="list-group" *ngFor="let name of firstname">
+                <li *ngIf="name!=userfname"
+                  class="list-group-item"
+                  style="cursor: pointer"
+                >
+                {{name}} 
+                <button *ngIf="name!=userfname" style="margin-left:100px" (click)="onaddtolist(name)" class="btn btn-success btn-sm">AddTo List</button> 
+                 
+                
+
+                </li>
+                
+ </ul>
+ 
+
+

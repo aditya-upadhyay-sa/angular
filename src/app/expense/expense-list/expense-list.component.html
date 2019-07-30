@@ -1,0 +1,61 @@
+<div class="container" style="padding-top: 30px">
+    <div class="jumbotron">
+
+        <div class="row">
+                <div class="col-xs-10">
+                  <app-expense-edit></app-expense-edit>
+                  <hr>
+
+                  <strong>Expense Name: </strong>{{nameofexpense}} <strong>Total Amount</strong>: <em>{{totalamount}} </em> <strong>Date: </strong>{{dd}}-{{mm}}
+
+                  <ul class="list-group">
+                      <a
+                      class="list-group-item"
+                      style="cursor: pointer"
+                      >
+                    <strong>{{userfname}}</strong> {{amountperperson}}
+                    
+                      </a>
+                    <a
+                      class="list-group-item"
+                      style="cursor: pointer"
+                      *ngFor="let name of friendlist; let i of index"
+                      (click)="onEdit(i)"
+                    >
+                     <strong>{{name}}</strong> : {{amountperperson}}
+                      </a>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+              <button class="btn btn-success btn-class btn-xs" (click)="onsavedata()">Save Data</button> || 
+             
+            </div>
+
+</div>
+
+<!-- <div class="container" style="padding-top: 30px">
+    <div class="jumbotron">
+
+        <div class="row">
+                <div class="col-xs-10">
+                  <app-expense-edit></app-expense-edit>
+                  <hr>
+                  <ul class="list-group">
+                    <a
+                      class="list-group-item"
+                      style="cursor: pointer"
+                      *ngFor="let data of expensedata; let i = index"
+                      (click)="onEditexpense(i)"
+                    >
+                      <strong>{{ data.expensename }}</strong> ({{ data.amount }} Rs.) <strong>Totalfriends: </strong>{{data.nooffriends}} <strong><em>Perperson: </em></strong>{{perperson[i]}} Rs. 
+                      
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+</div> -->
+
+   
